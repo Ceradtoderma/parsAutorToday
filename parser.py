@@ -10,7 +10,7 @@ class ParsAT:
         self.password = password
         self.url = url
         self.name = name
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('chromedriver.exe')
         self.text = ''
         self.state = 'ok'
         self.pars = True
