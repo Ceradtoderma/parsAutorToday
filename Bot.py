@@ -87,6 +87,5 @@ async def other(message: types.Message):
     await message.answer('Парсер Autor today. Можем залогинится, можно попробовать спарсить без входа')
 
 
-if __name__ == "__main__":
-    # Запуск бота
-    executor.start_polling(dp, skip_updates=True)
+
+executor.start_polling(dp, skip_updates=True)
