@@ -8,17 +8,11 @@ class ParsAT:
 
     def __init__(self, url, login='', password='', name='data' ):
 
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-        # chrome_options.add_argument("--headless")
-        # chrome_options.add_argument("--disable-dev-shm-usage")
-        # chrome_options.add_argument("--no-sandbox")
-
         self.log = login
         self.password = password
         self.url = url
         self.name = name
-        self.driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+        self.driver = webdriver.Chrome()
         self.text = ''
         self.state = 'ok'
         self.pars = True
@@ -93,7 +87,6 @@ class ParsAT:
 
 if __name__ == '__main__':
     # pass
-    pars = ParsAT('https://author.today/reader/131901/1055496', 'aisavikin@gmail.com', 'eto2016Detk*', '123')
+    pars = ParsAT('https://author.today/work/82394', 'aisavikin@gmail.com', 'eto2016Detk*', '123')
     pars.login()
-    pars.get_text()
     print(pars.text)
