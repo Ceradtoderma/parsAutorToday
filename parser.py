@@ -86,7 +86,4 @@ class ParsAT:
 
 
 if __name__ == '__main__':
-    # pass
-    pars = ParsAT('https://author.today/work/82394', 'aisavikin@gmail.com', 'eto2016Detk*', '123')
-    pars.login()
-    print(pars.text)
+    pass
